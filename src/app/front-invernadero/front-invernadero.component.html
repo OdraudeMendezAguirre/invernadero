@@ -1,0 +1,107 @@
+<body>
+    <div class="navbar">
+        <span class="title">InvernaderoIOT</span>
+    </div>
+    
+    <div class="banner">    
+        <div class="encabezado">
+            <h1>Tomates</h1>
+
+            <div class="dato">
+                <p class="clase">Temperatura:</p>
+                <p>{{ut.valor}}</p>
+            </div>
+
+            <div class="dato">
+                <p class="clase">Humedad:</p>
+                <p>{{uh.valor}}</p>
+            </div>
+
+            <div class="dato">
+                <p class="clase">Luz:</p>
+                <p>{{ul.valor}}</p>
+            </div>  
+        </div>    
+        <img src="https://blush-design.imgix.net/collections/humaaans/v30/Master/Composition/cropped/Plants.svg?w=500&auto=compress&cs=srgb">
+    </div>
+
+    <div class="funcionalidades">
+        <p class="titulo">Funcionalidades</p>
+        <div class="funciones">
+
+            <div class="funcion-1">
+                <p class="funcionalidad">Ventilador</p>
+                <span class="material-icons">spa</span>
+                <p>{{venti}}</p>
+                <label class="switch">
+                    <input id="ventilador" type="checkbox" name="ventilador" id="ventilador" [(ngModel)]="estadoV" (change)="ventilador()"/>
+                    <span class="slider round"></span>
+                  </label>
+            </div>
+    
+            <div class="funcion-1">
+                <p class="funcionalidad">Lámparas</p>
+                <span class="material-icons">spa</span>
+                <p>{{lamp}}</p>
+                <label class="switch">
+                    <input id="lamparas" type="checkbox" name="lampara" id="lampara" [(ngModel)]="estadoL" (change)="lampara()"/>
+                    <span class="slider round"></span>
+                  </label>
+            </div>
+    
+            <div class="funcion-1">
+                <p class="funcionalidad">Rociadores</p>
+                <span class="material-icons">spa</span>
+                <p>{{roci}}</p>
+                <label class="switch">
+                    <input id="rociadores" type="checkbox" name="rociador" id="rociador" [(ngModel)]="estadoR" (change)="rociador()"/>
+                    <span class="slider round"></span>
+                    
+                  </label>
+            </div>
+        </div>
+    </div>
+    <div class="tabla">
+        <p class="titulo">Datos</p>
+        <table>
+            <thead> 
+                <tr>
+                    <th>Temperatura</th>
+                    <th>Luminosidad</th>
+                    <th>Humedad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--Dato Nuevo-->
+                <tr *ngFor="let lum of datosLuminosidad;let temp of datosTemperatura;let hum of datosHumedad; let l = index"  >
+                    <td>{{temp.valor}}</td>
+                    <td>{{lum.valor}}</td>
+                    <td>{{hum.valor}}</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+        
+        
+    <div class="footer">
+        <div class="col1">
+           <h4>InvernaderoIOT</h4>
+           <h2>El control de tu invernadero <br>   en tus manos.</h2>
+        </div>
+        <div class="item1">
+            <div class="col2">
+                <h4>Contacto</h4>
+                <p>IOTInverdaeros</p>
+                <p>+52 271 000 0000</p>
+                <p>iotinverna@gmail.com</p>
+            </div>
+            <div class="col3">
+                <h4>Tecnologias</h4>
+                <p>IOTInvernaderos</p>
+                <p>Reportar Quejas</p>
+            </div>
+        </div>
+        
+    </div>
+</body>
