@@ -10,6 +10,7 @@ import { InvernaderoComponent } from './invernadero/invernadero.component';
 import { FrontInvernaderoComponent } from './front-invernadero/front-invernadero.component';
 import { MongoService } from './mongo.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,

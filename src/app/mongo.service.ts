@@ -16,9 +16,11 @@ export class MongoService{
     public lum():Observable<any>{
         return this.http.get(this.lumapi);
     }
+
     public temp():Observable<any>{
         return this.http.get(this.humapi);
     }
+    
     public hum():Observable<any>{
         return this.http.get(this.tempapi);
     }
